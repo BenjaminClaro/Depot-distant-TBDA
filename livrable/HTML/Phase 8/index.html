@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaires</title>
+</head>
+
+
+
+<body>
+    
+    <p>* Ces zones sont obligatoires</p>
+
+
+    <form action="http://bienvu.net/script.php" method="get"> 
+        
+        <fieldset>
+            <legend>Vos coordonnées</legend>
+            <label for="nom">Votre nom* </label><input type="text" name="nom" required><br>
+            <label for="prenom">Votre prénom* </label><input type="text" name="prenom" required><br>
+            <label for="sexe">Sexe* </label><input type="radio" name="sexe" value="Feminin">Féminin 
+            <input type="radio" name="sexe" value="Masculin">Masculin <br>
+            <label for="date de naissance">Date de naissance* </label><input type="date" name="date de naissance" id="date de naissance" required><br>
+            <label for="code postal">Code Postal* </label><input type="text" name="code postal" id="code postal" required><br>
+            <label for="adresse">Adresse </label><input type="text" name="adresse" id="adresse"><br>
+            <label for="ville">Ville </label><input type="text" name="ville" id="ville"><br>
+            <label for="email">Email* </label><input type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" requierd><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Votre demande</legend>
+            <label for="sujet">Sujet* </label>
+            <select id="sujet" required>
+                <option value="" selected>Veuillez séléctionner un sujet</option>
+                <option value="Mes commandes">Mes commandes</option> 
+                <option value="Question sur un produit">Question sur un produit</option>
+                <option value="Réclamation">Réclamation</option>
+                <option value="Autres">Autres</option>
+            </select><br>
+
+            <label for="votre question">Votre question* </label><textarea name="votre question" required></textarea>
+
+        </fieldset>
+        
+        <input type="checkbox" name="accepter" id="accepter" requierd> * J'accepte le traitement informatique de ce formulaire <br>
+
+
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Retour">
+
+
+     </form>
+
+</body>
+</html>

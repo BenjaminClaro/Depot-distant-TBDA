@@ -1,6 +1,9 @@
+// Marche pas pour le mment
+
+
 function affichImg(image){
 
-    document.getElementById("papillon").innerHTML = image;
+    document.getElementById("papillon").innerHTML = image; 
 
 }
 

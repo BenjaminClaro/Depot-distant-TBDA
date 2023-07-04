@@ -12,4 +12,3 @@ for (i = 0; i < lig; ++i ){
     }
     document.write( "<br>");
 }
-

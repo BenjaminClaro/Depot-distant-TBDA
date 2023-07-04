@@ -5,6 +5,7 @@ function affichImg(image){
 
     document.getElementById("papillon").innerHTML = image; 
 
+
 }
 
 

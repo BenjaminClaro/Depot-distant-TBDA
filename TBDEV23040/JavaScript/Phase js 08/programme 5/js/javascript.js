@@ -1,16 +1,16 @@
 
 // Marche pas pour le moment
-
+var n = 0
 var mot = window.prompt("Donnez moi un mot");
 var max = mot.length;
 var nb = 0;
+document.write(mot + "<br>");
+for(p=1; p<max+1; ++p){
 
-for(p=0; p<max; ++p){
 
-
-    var lettre = (mot.substring(p, 1));  
+    var lettre = (mot.substring(p, n));  
     
-    document.write("<br>"+lettre+"<br>");
+
 
     switch(lettre){
 
@@ -20,15 +20,17 @@ for(p=0; p<max; ++p){
         case "o" :
         case "u" :
         case "y" :
-            document.write("a");
+
             nb = ++nb;
-            document.write(nb);
+
             break;
 
         default :
-            document.write("n");
+
 
     }
+
+    n = ++n;
 }
-document.write("<br>"+ (mot.indexOf("u")+1));
-document.write("<br>"+nb);
+
+document.write("Il y a " + nb + " voyelles dans ce mot");

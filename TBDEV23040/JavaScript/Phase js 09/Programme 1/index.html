@@ -1,3 +1,7 @@
+
+
+<!-- Ne marche pas pour le moment -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papillon</title>
 
+    
+
+</head>
+<body>
+    <img src="assets/images/papillo.jpg" id="papillon" >
+    <p id="paragraphe">test</p>
     <script>
 
         function affichImg(image){
         const imag = document.getElementById("papillon"); 
         imag.innerHTML = image;
-        element.src = "assets/images/papillon.jpg";
+        element.src = image;
         }
 
         function produit(x, y){
@@ -25,11 +35,5 @@
         produit(nb1, nb2);
 
     </script>
-
-</head>
-<body>
-    <img src="assets/images/papillo.jpg" id="papillon" >
-    <p id="paragraphe">test</p>
-    
 </body>
 </html> 

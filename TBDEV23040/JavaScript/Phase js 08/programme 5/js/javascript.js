@@ -20,6 +20,12 @@ for(p=1; p<max+1; ++p){
         case "o" :
         case "u" :
         case "y" :
+        case "A" :
+        case "E" :
+        case "O" :
+        case "I" :
+        case "U" :
+        case "Y" :
 
             nb = ++nb;
 

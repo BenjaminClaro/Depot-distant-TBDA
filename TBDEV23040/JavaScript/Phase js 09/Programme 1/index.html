@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papillon</title>
+
+    <script>
+
+        function affichImg(image){
+        const imag = document.getElementById("papillon"); 
+        imag.innerHTML = image;
+        element.src = "assets/images/papillon.jpg";
+        }
+
+        function produit(x, y){
+            let text = "(x*y)";
+            document.getElementById("paragraphe").innerHTML = text; 
+        }
+
+        var nb1 = window.prompt("Nombre 1");
+        var nb2 = window.prompt("Nombre 2");
+
+        affichImg("assets/images/papillon.jpg");
+        produit(nb1, nb2);
+
+    </script>
+
 </head>
 <body>
     <img src="assets/images/papillo.jpg" id="papillon" >
-
-    <script src="js/javascript.js"></script> 
+    <p id="paragraphe">test</p>
+    
 </body>
 </html> 

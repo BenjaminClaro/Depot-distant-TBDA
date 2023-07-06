@@ -1,31 +1,26 @@
-
-
-<!-- Ne marche pas pour le moment -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papillon</title>
- 
-    
+ </head>
 
-</head>
-<body>
-    <img src="assets/images/papillo.jpg" id="papillon" >
-    <p id="paragraphe">test</p>
+
+
+
+
+ <body>
+    <img src="assets/images/papillo,.jpg" id="papillon" >
+    <p id="paragraphe"></p>
     <script>
 
         function affichImg(image){
-        const imag = document.getElementById("papillon"); 
-        imag.innerHTML = image;
-        element.src = image;
+            document.getElementById("papillon").src = image;
         }
 
         function produit(x, y){
-            let text = "(x*y)";
-            document.getElementById("paragraphe").innerHTML = text; 
+            document.getElementById("paragraphe").innerHTML = ("Le cube de " + nb1 + " est de " + nb1*nb1*nb1 +"<br> Le produit de " + nb1 + " x " + nb2 + " est de " +nb1*nb2) ;
         }
 
         var nb1 = window.prompt("Nombre 1");

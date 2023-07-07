@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intercepte la validation du formulaire</title>
+
+        <script>
+            function checkForm(f) {
+                alert("Vous vous appelez : " + f.elements['soci'].value + " " + f.elements['prenom'].value);
+                return false; // do not submit the form
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Vos coordonnées :</h2>
+        <h3>* Ces zones sont obligatoires pour envoyer le formulaire.</h3>
+        <form id="form1" name="form1" onSubmit="return checkForm(this);" method="post">
+            <label>Société : </label><input type="text" name= "soci"/> *<br>
+            <label></label>Personne à contacter : <input type="text" name= "contact"/> *<br>
+            <label>Adresse de l'entreprise : </label><textarea name="adresse" ></textarea><br>
+            <label>Code postal : </label><input type="text" name="postal"/>*<br>
+            <label>Ville : </label><input type="text" name="ville"/>*<br>
+            <label>E-Mail : </label><input type="email" name="mail"/>*<br>
+            <label>Téléphone : </label><input type="text" name="tel"/> <br>
+            <label>Sélectionnez l'environnement technique du projet : </label><textarea name="projet" ></textarea> <br>
+            <select>
+                <option value="1">Choisissez</option>
+                <option value="2">Access</option>
+                <option value="3">Java</option>
+                <option value="4">Delphi</option>
+                <option value="5">Windev</option>
+                <option value="6">Visual Basic</option>
+                <option value="7">Power Builder</option>
+                <option value="8">Internet</option>
+                <option value="9">Intranet</option>
+                <option value="10">Windows NT</option>
+                <option value="11">Unix</option>
+                <option value="12">SQL Server</option>
+                <option value="13">Oracle</option>
+                <option value="15">Autres...</option>
+            </select> <br> <br>
+            <input type="submit" id="idSubForm1" name="subForm1" value="Connection" />
+            <input type="submit" id="idSubForm2" name="subForm2" value="Annuler" />
+        </form>
+    </body>
+</html>

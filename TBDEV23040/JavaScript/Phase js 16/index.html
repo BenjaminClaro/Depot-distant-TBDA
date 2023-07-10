@@ -1,3 +1,8 @@
+
+
+<!-- Ne marche pas pour le moment -->
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +12,10 @@
             function checkForm(f) {
                 
                 //1 caractère
-
+                let soci = document.getElementById("societe").innerHTML;
+                var filtresoci = new RegExp("^[A-Za-z]+$");
+                var resultatsoci = filtresoci.test(soci) ;
+                alert(resultatsoci);
 
                 //code postal
 
@@ -17,15 +25,15 @@
                 
                 //tel
                 var tel = document.getElementById("telephone").innerHTML;
-                var filtre = new RegExp("^0[1-9]([-. ]?[0-9]{2}){4}$");
-                var resultat = filtre.test(tel);
-                console.log(tel);
+                var filtretel = new RegExp("^0[1-9]([-. ]?[0-9]{2}){4}$");
+                var resultat = filtretel.test(tel);
+                console.log(resultat);
                 
                 
                 //environnement technique
                 let areaa = document.getElementById("area").innerHTML;
                 let liste = document.getElementById("selection").innerHTML;
-                document.getElementById("area").innerHTML = areaa + "<br>" +liste;
+                document.getElementById("area").innerHTML = areaa + "<br>" +"plot";
 
                 return false;
             }
@@ -35,12 +43,12 @@
         <h2>Vos coordonnées :</h2>
         <h3>* Ces zones sont obligatoires pour envoyer le formulaire.</h3>
         <form id="form1" name="form1" onSubmit="return checkForm(this);" method="post">
-            <label>Société : </label><input type="text" name= "soci"/> *<br>
+            <label>Société : </label><input type="text" name= "soci" id="societe"/> *<br>
             <label></label>Personne à contacter : <input type="text" name= "contact"/> *<br>
             <label>Adresse de l'entreprise : </label><textarea name="adresse" ></textarea><br>
-            <label>Code postal : </label><input type="text" name="postal"/>*<br>
-            <label>Ville : </label><input type="text" name="ville"/>*<br>
-            <label>E-Mail : </label><input type="email" name="mail"/>*<br>
+            <label>Code postal : </label><input type="text" name="postal"/> *<br>
+            <label>Ville : </label><input type="text" name="ville"/> *<br>
+            <label>E-Mail : </label><input type="email" name="mail"/> *<br>
             <label>Téléphone : </label><input type="text" name="tel" id="telephone"/> <br>
             <label>Sélectionnez l'environnement technique du projet : </label><textarea name="projet" id="area"></textarea> <br>
             <select id="selection">

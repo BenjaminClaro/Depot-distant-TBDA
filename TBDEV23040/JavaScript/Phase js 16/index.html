@@ -5,8 +5,29 @@
 
         <script>
             function checkForm(f) {
-                alert("Vous vous appelez : " + f.elements['soci'].value + " " + f.elements['prenom'].value);
-                return false; // do not submit the form
+                
+                //1 caractère
+
+
+                //code postal
+
+
+                //email
+
+                
+                //tel
+                var tel = document.getElementById("telephone").innerHTML;
+                var filtre = new RegExp("^0[1-9]([-. ]?[0-9]{2}){4}$");
+                var resultat = filtre.test(tel);
+                console.log(tel);
+                
+                
+                //environnement technique
+                let areaa = document.getElementById("area").innerHTML;
+                let liste = document.getElementById("selection").innerHTML;
+                document.getElementById("area").innerHTML = areaa + "<br>" +liste;
+
+                return false;
             }
         </script>
     </head>
@@ -20,9 +41,9 @@
             <label>Code postal : </label><input type="text" name="postal"/>*<br>
             <label>Ville : </label><input type="text" name="ville"/>*<br>
             <label>E-Mail : </label><input type="email" name="mail"/>*<br>
-            <label>Téléphone : </label><input type="text" name="tel"/> <br>
-            <label>Sélectionnez l'environnement technique du projet : </label><textarea name="projet" ></textarea> <br>
-            <select>
+            <label>Téléphone : </label><input type="text" name="tel" id="telephone"/> <br>
+            <label>Sélectionnez l'environnement technique du projet : </label><textarea name="projet" id="area"></textarea> <br>
+            <select id="selection">
                 <option value="1">Choisissez</option>
                 <option value="2">Access</option>
                 <option value="3">Java</option>

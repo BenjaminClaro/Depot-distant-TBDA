@@ -1,0 +1,61 @@
+ul {
+    background-color: black;
+    color: white;
+    display:flex;
+    padding: 20px;
+    flex-flow: row wrap;
+    
+}
+
+a{
+    color: white;
+}
+
+li {
+    display: flex;
+    margin-left: 10px;
+}
+
+section, form {
+    margin-right: 35%;
+    
+}
+
+
+header {
+    display:flex;
+    align-content: flex-start;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+
+nav img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) 
+{ 
+    
+    header p, h2, p, ul, table, form{
+        font-size: 85%;
+    }
+
+    ul{
+        display:flex;
+        padding: 20px;
+        flex-flow: column wrap;
+    }
+
+    section, form{
+        margin-right: 0%;
+    }
+
+}    

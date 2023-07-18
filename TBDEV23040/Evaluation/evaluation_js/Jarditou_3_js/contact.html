@@ -37,15 +37,25 @@
         
         <fieldset>
             <legend>Vos coordonnées</legend>
-            <label for="nom">Votre nom* </label><input type="text" name="nom" id="nom" required><br>
-            <label for="prenom">Votre prénom* </label><input type="text" name="prenom" id="prenom" required><br>
+            <label for="nom">Votre nom* </label><input type="text" name="nom" id="nom" required="required"> <span id="nom_manquant"></span><br>
+            
+
+            <label for="prenom">Votre prénom* </label><input type="text" name="prenom" id="prenom" required> <span id="prenom_manquant"></span><br>
+            
+
             <label for="sexe">Sexe* </label><input type="radio" name="sexe" value="Feminin">Féminin 
             <input type="radio" name="sexe" id="sexe" value="Masculin">Masculin <br>
+
             <label for="date_de_naissance">Date de naissance* </label><input type="date" name="date_de_naissance" id="date_de_naissance" required><br>
-            <label for="code_postal">Code Postal* </label><input type="text" name="code_postal" id="code_postal" required><br>
+            
+            <label for="code_postal">Code Postal* </label><input type="text" name="code_postal" id="code_postal" required> <span id="postal_manquant"></span><br>
+            
+
             <label for="adresse">Adresse </label><input type="text" name="adresse" id="adresse"><br>
             <label for="ville">Ville </label><input type="text" name="ville" id="ville"><br>
-            <label for="email">Email* </label><input type="email" name="email" id="email" placeholder="dave.loper@afpa.fr"><br>
+
+            <label for="email">Email* </label><input type="email" name="email" id="email" placeholder="dave.loper@afpa.fr"> <span id="email_manquant"></span><br>
+            
 
         </fieldset>
 
@@ -61,17 +71,20 @@
             </select><br>
 
             <label for="votre_question">Votre question* </label><textarea name="votre_question" id="votre_question" required></textarea>
+            <span id="question_manquant"></span>
 
         </fieldset>
         
-        <input type="checkbox" name="accepter" id="accepter"> * J'accepte le traitement informatique de ce formulaire <br>
+        <input type="checkbox" name="accepter" id="accepter" required> * J'accepte le traitement informatique de ce formulaire <br>
 
 
-        <input type="submit" value="Envoyer">
+        <input type="submit" id="envoie" value="Envoyer">
         <input type="reset" value="Retour">
 
 
      </form>
+
+    <script src="js/javascript.js"></script>
 
 
      <footer>

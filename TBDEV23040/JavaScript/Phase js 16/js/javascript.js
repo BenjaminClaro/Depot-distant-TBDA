@@ -1,4 +1,4 @@
-var validation = document.getElementById("idSubForm1");
+            var validation = document.getElementById("idSubForm1");
 
             var societe = document.getElementById("societe");
             var societe_valid = new RegExp("^[A-Za-z0-9-']+$");
